@@ -1,6 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe ResearchController, type: :controller do
+RSpec.describe ResearchesController, type: :controller do
+
+  describe "GET #index" do
+    before do
+      @researches = FactoryGirl.create_list(:research, 2)
+      get "index"
+    end
+
+    it "lists all researches" do
+      expect(assigns(:researches)).to match_array(@researches)
+    end
+
+    it "renders index view" do
+      expect(response).to render_template :index
+    end
+  end
 
   describe "GET #show" do
     it "returns http success" do

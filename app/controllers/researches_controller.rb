@@ -1,5 +1,6 @@
-class ResearchController < ApplicationController
+class ResearchesController < ApplicationController
   def index
+    @researches = Research.all
   end
 
   def show
