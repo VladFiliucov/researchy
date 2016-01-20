@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :researches
 
-  root "research#index"
+  root "researches#index"
 end
