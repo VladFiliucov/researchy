@@ -1,1 +1,23 @@
-<h1>Hello</h1>
+<h1 style="text-align: center;">Avaliable researches</h1>
+<div class="research-table col-md-10 col-md-offset-1">
+  <table class="table table-hover table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Author</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @researches.each do |r| %>
+          <td><%= link_to r.title, research_path(r) %></td>
+          <td><%= r.category  %></td>
+          <td><%= r.author %></td>
+          <td><%= r.description %></td>
+        <% end%>
+      </tr>
+    </tbody>
+  </table>
+</div>
