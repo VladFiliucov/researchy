@@ -25,4 +25,3 @@
 .bundle/*
 !.bundle/config
 config/application.yml
-config/secrets.yml

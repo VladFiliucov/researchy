@@ -1,2 +1,11 @@
-<h1>Research#show</h1>
-<p>Find me in app/views/research/show.html.erb</p>
+<h1><%= @research.title %></h1>
+
+<div class="fields row">
+  <h3><%= @research.category %></h3>
+</div>
+<div class="fields row">
+  <h3><%= @research.description %></h3>
+</div>
+<div class="fields row">
+  <h3><%= @research.body %></h3>
+</div>
