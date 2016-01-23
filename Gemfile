@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor'
 gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'devise'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -26,6 +27,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'shoulda-matchers'
 end
 
 group :test do
