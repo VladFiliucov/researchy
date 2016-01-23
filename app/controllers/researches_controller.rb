@@ -15,7 +15,7 @@ class ResearchesController < ApplicationController
     @research = Research.new(research_params)
 
     if @research.save
-      redirect_to @research
+      redirect_to @research, notice: "Research successfully created."
     else
       render :new
     end
