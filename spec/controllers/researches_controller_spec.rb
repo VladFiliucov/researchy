@@ -31,6 +31,8 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "GET #new" do
+    sign_in_user
+
     before {get :new}
 
     it "assigns new research to @research" do
@@ -43,6 +45,8 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "POST #create" do
+    sign_in_user
+
     context "with valid attributes" do
       it "should save new research" do
        expect  { post :create, research: FactoryGirl.attributes_for(:research) }.to change(Research, :count).by(1)
@@ -67,6 +71,9 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "GET #edit" do
+    
+    sign_in_user
+
     before { get :edit, id: research}
 
     it "assigns request to @request" do
@@ -79,6 +86,9 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "PATCH #update" do
+
+    sign_in_user
+
     context "valid attributes" do
       it "assigns request to @request" do
         patch :update, id: research, research: FactoryGirl.attributes_for(:research)
@@ -132,6 +142,8 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "DELETE #destroy" do
+
+    sign_in_user
 
     before { research }
 

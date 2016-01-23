@@ -1,2 +1,13 @@
-<h1>Research#new</h1>
-<p>Find me in app/views/research/new.html.erb</p>
+<%= form_for @research do |r| %>
+  <%= r.label :title %>
+  <%= r.text_field :title %>
+  <%= r.label :category %>
+  <%= r.text_field :category %>
+  <%= r.label :description %>
+  <%= r.text_field :description %>
+  <%= r.label :body %>
+  <%= r.text_field :body %>
+  <%= r.label :author %>
+  <%= r.text_field :author %>
+  <%= r.submit "Create" %>
+<% end %>

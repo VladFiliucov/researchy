@@ -10,8 +10,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
         <% @researches.each do |r| %>
+      <tr>
           <td><%= link_to r.title, research_path(r) %></td>
           <td><%= r.category  %></td>
           <td><%= r.author %></td>
@@ -20,4 +20,8 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+<div>
+  <%= link_to "Create Research", new_research_path %>
 </div>

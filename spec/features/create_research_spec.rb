@@ -6,20 +6,20 @@ feature "create research", %q{
   I want to create researches
 } do
 
-  scenario "authenticated user creates research" do
-    User.create!(email: "user@email.com", password: "12345678")
+  given(:user) { create(:user) }
 
-    visit new_user_session_path
-    fill_in "Email", with: "user@email.com"
-    fill_in "Password", with: "12345678"
-    click_on "Log in"
+  scenario "authenticated user creates research" do
+
+    sign_in(user)
 
     visit researches_path
     click_on "Create Research"
     fill_in "Title", with: "My Research"
     fill_in "Category", with: "Ruby"
     fill_in "Description", with: "Extracting to new class"
-    fill_in "Body", with: "Very exciting research"
+    fill_in "Author", with: "Me"
+    fill_in "Body", with: "blah blah blah"
+
     click_on "Create"
 
     expect(page).to have_content "Research successfully created."
@@ -27,8 +27,8 @@ feature "create research", %q{
 
   scenario "non-authenticated user can't create research" do
     visit researches_path
-    click_on "Craete Research"
+    click_on "Create Research"
 
-    expect(page).to have_content "You have to sign in or sign up before continuing"
+    expect(page).to have_content "You need to sign in or sign up before continuing"
   end
 end
