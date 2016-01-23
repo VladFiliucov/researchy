@@ -27,12 +27,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'shoulda-matchers'
 end
 
 group :test do
   gem "faker"
   gem "capybara"
+  gem 'shoulda-matchers'
   gem "database_cleaner"
   gem "launchy"
 end
