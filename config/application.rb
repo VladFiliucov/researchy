@@ -10,6 +10,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require 'pdfkit'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,6 +19,8 @@ Bundler.require(*Rails.groups)
 module Researchy
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
+    config.middleware.use "PDFKit::Middleware"
+    config.action_controller.asset_host = "https://researchy.herokuapp.com/"
 
     config.generators do |g|
       g.test_framework :rspec,
