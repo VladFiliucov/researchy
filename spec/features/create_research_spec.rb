@@ -20,7 +20,7 @@ feature "create research", %q{
     fill_in "Author", with: "Me"
     fill_in "Body", with: "blah blah blah"
 
-    click_on "Create"
+    click_on "Publish Research"
 
     expect(page).to have_content "Research successfully created."
   end

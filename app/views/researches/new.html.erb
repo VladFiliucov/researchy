@@ -1,13 +1,9 @@
-<%= form_for @research do |r| %>
-  <%= r.label :title %>
-  <%= r.text_field :title %>
-  <%= r.label :category %>
-  <%= r.text_field :category %>
-  <%= r.label :description %>
-  <%= r.text_field :description %>
-  <%= r.label :body %>
-  <%= r.text_field :body %>
-  <%= r.label :author %>
-  <%= r.text_field :author %>
-  <%= r.submit "Create" %>
+<h1>Share your knowledge. Publish a research.</h1>
+<%= simple_form_for @research do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :author %>
+  <%= f.input :body %>
+  <%= f.button :submit, "Publish Research", class: "btn btn-lg btn-success-outline" %>
 <% end %>
