@@ -19,8 +19,7 @@ Bundler.require(*Rails.groups)
 module Researchy
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
-    config.middleware.use "PDFKit::Middleware"
-    config.action_controller.asset_host = "https://researchy.herokuapp.com/"
+    config.middleware.use PDFKit::Middleware, :print_media_type => true
 
     config.generators do |g|
       g.test_framework :rspec,
