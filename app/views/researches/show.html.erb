@@ -10,4 +10,5 @@
   <div class="fields row">
     <h3><%= @research.body.html_safe %></h3>
   </div>
+<%= link_to "Buy this research", research_path(@research, format: "pdf") %>
 </div>
