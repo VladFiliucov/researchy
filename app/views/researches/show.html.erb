@@ -1,11 +1,13 @@
-<h1><%= @research.title %></h1>
+<div class="show-container">
+  <h1><%= @research.title %></h1>
 
-<div class="fields row">
-  <h3><%= @research.category %></h3>
-</div>
-<div class="fields row">
-  <h3><%= @research.description %></h3>
-</div>
-<div class="fields row">
-  <h3><%= @research.body.html_safe %></h3>
+  <div class="fields row">
+    <h3><%= @research.category %></h3>
+  </div>
+  <div class="fields row">
+    <h3><%= @research.description %></h3>
+  </div>
+  <div class="fields row">
+    <h3><%= @research.body.html_safe %></h3>
+  </div>
 </div>

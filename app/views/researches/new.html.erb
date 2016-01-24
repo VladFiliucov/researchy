@@ -1,3 +1,4 @@
+<div class="new-research-container">
 <h1>Share your knowledge. Publish a research.</h1>
 <%= simple_form_for @research do |f| %>
   <%= f.input :title %>
@@ -7,3 +8,4 @@
   <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
   <%= f.button :submit, "Publish Research", class: "btn btn-lg btn-success-outline" %>
 <% end %>
+</div>
