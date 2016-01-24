@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'wkhtmltopdf-binary'
+gem 'pdfkit'
 
 
 source 'https://rails-assets.org' do
