@@ -1,3 +1,12 @@
 <nav class="navbar navbar-full navbar-dark bg-inverse">
   <h3 class="navbar-brand"><%= link_to "Researchy", root_path, style: "color: white;" %></h3>
+  <% if user_signed_in? %>
+    <div style="float: right;">
+     <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-primary") %>
+    </div>
+  <% else %>
+    <div style="float: right;">
+      <%= link_to('Login', new_user_session_path, class: "btn btn-primary")  %>  
+    </div>
+  <% end %>
 </nav>
