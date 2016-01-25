@@ -1,6 +1,6 @@
 class ResearchesController < ApplicationController
   before_action :set_research, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [ :index, :show]
+  before_action :authenticate_user!, except: [ :index]
   def index
     @researches = Research.all
   end
@@ -35,6 +35,15 @@ class ResearchesController < ApplicationController
 
   def destroy
     @research.destroy
+    redirect_to researches_path
+  end
+
+  def send_research
+    @research = Research.find(params[:id])
+    @user = User.find(current_user)
+
+    ResearchMailer.send_research(@research, @user).deliver
+    flash[:notice] = "Research has been emailed to you. Check your Email. It may be in your spam folder."
     redirect_to researches_path
   end
 
