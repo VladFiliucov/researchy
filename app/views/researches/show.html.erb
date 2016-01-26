@@ -9,7 +9,7 @@
   </div>
   <div class="row col-md-12 col-md-offset-4 button-row">
     <%= link_to "Download Research in PDF", research_path(@research, format: "pdf"), :target => '_blank', class: "btn btn-danger" %>
-    <%= link_to "Email me research", :controller => "researches", :action => "send_research", :id => @research.id, class: "btn btn-warning"  %>
+    <%= link_to "Email me research", :controller => "researches", :action => "send_research", :id => @research.id  %>
   </div>
   <div class="fields row">
     <h3><%= @research.body.html_safe %></h3>
