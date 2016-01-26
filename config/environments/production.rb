@@ -84,8 +84,20 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'researchy.herokuapp.com',
-    user_name:            'researchy.herokuapp@gmail.com',
-    password:             'researchypassword!',
+    user_name:            ENV['GMAIL_USERNAME'],
+    password:             ENV['GMAIL_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
+
+config.action_mailer.smtp_settings = {
+    :address   => "smtp.sendgrid.net",
+    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => ENV["SENDGRID_USERNAME"],
+    :password  => ENV["SENDGRID_PASSWORD"], # SMTP password is any valid API key
+    user_name:            ENV['GMAIL_USERNAME'],
+    password:             ENV['GMAIL_PASSWORD'],
+    :authentication => 'login',
+    :domain => 'researchy.herokuapp.com', # your domain to identify your server when connecting
+}
