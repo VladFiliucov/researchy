@@ -19,6 +19,7 @@ RSpec.describe ResearchesController, type: :controller do
   end
 
   describe "GET #show" do
+    sign_in_user
     before { get :show, id: research }
 
     it "assigns request to @request" do
