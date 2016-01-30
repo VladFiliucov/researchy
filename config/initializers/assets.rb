@@ -11,7 +11,7 @@ Rails.application.config.assets.precompile += %w( ckeditor/* )
 # Rails.application.config.assets.precompile += %w( search.js )
 
 ActionController::Base.asset_host = Proc.new { |source, request|
-  if request.env["REQUEST_PATH"].include? ".pdf"
+  if request.env["REQUEST_PATH"].to_s.include? ".pdf"
     "file://#{Rails.root.join('public')}"
   else
     "#{request.protocol}#{request.host_with_port}"

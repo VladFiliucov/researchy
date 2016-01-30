@@ -20,7 +20,7 @@ gem 'mini_magick'
 gem 'wkhtmltopdf-binary'
 gem 'pdfkit'
 gem 'unicorn'
-
+gem 'puma'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
