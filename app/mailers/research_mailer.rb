@@ -11,6 +11,6 @@ class ResearchMailer < ApplicationMailer
     @research = research
     @user = user
 
-    mail(to: @user.email, subject: 'Your research form researchy.herokuapp.com')
+    mail(to: @user.email, subject: 'Your research from researchy.herokuapp.com')
   end
 end
