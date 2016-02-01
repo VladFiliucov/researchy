@@ -1,3 +1,16 @@
+GIT
+  remote: git://github.com/twalpole/devise.git
+  revision: 2024fca4dfa3323070c3477e262b8422cadf6a42
+  branch: rails5
+  specs:
+    devise (3.5.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -105,13 +118,6 @@ GEM
     concurrent-ruby (1.0.0)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
-    devise (3.5.5)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      responders
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     em-hiredis (0.3.1)
       eventmachine (~> 1.0)
@@ -121,7 +127,7 @@ GEM
     execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
+    factory_girl_rails (4.6.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     faye-websocket (0.10.2)
@@ -176,6 +182,8 @@ GEM
       railties (= 5.0.0.beta1.1)
       sprockets-rails (>= 2.0.0)
     rails-assets-tether (1.1.1)
+    rails-controller-testing (0.0.3)
+      rails (>= 4.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -187,7 +195,7 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_serve_static_assets (0.0.4)
+    rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.4)
     railties (5.0.0.beta1.1)
       actionpack (= 5.0.0.beta1.1)
@@ -282,7 +290,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.1.0)
   database_cleaner
-  devise
+  devise!
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -293,7 +301,9 @@ DEPENDENCIES
   puma
   rails (= 5.0.0.beta1.1)
   rails-assets-tether (>= 1.1.0)!
+  rails-controller-testing
   rails_12factor
+  rails_stdout_logging
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

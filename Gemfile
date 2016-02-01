@@ -10,9 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails_12factor'
 gem 'bootstrap', '~> 4.0.0.alpha3'
-gem 'devise'
+gem 'devise', github: 'twalpole/devise', branch: 'rails5'
 gem 'simple_form'
 gem 'ckeditor'
 gem 'carrierwave'
@@ -21,6 +20,7 @@ gem 'wkhtmltopdf-binary'
 gem 'pdfkit'
 gem 'unicorn'
 gem 'puma'
+gem 'rails_stdout_logging'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -30,11 +30,16 @@ end
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'byebug'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 group :test do
