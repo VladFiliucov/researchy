@@ -42,7 +42,9 @@ class ResearchesController < ApplicationController
     @research = Research.find(params[:id])
     @user = User.find(current_user)
 
-    ResearchMailer.send_research(@research, @user).deliver
+    #ResearchMailer.send_research(@research, @user).deliver
+    SendResearchJob.perform_later(@research, @user)
+
     flash[:notice] = "Research has been emailed to you. Check your Email. It may be in your spam folder."
     redirect_to researches_path
   end
