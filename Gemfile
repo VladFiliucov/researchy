@@ -21,7 +21,6 @@ gem 'pdfkit'
 gem 'puma'
 gem 'rails_stdout_logging'
 gem 'sidekiq'
-gem 'redis'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
