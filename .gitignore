@@ -26,6 +26,3 @@
 !.bundle/config
 config/application.yml
 
-# Ignore redis dump.rdb
-
-dump.rdb
