@@ -18,9 +18,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'wkhtmltopdf-binary'
 gem 'pdfkit'
-gem 'unicorn'
 gem 'puma'
 gem 'rails_stdout_logging'
+gem 'sidekiq'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
