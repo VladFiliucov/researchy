@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6389'
+  # ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6389'
   # Code is not reloaded between requests.
   config.cache_classes = true
 
