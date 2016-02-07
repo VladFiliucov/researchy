@@ -5,6 +5,6 @@ class SendResearchJob < ActiveJob::Base
     user = User.find(user_id)
     research = Research.find(research_id)
 
-    ResearchMailer.send_research(research, user).deliver_now
+    ResearchMailer.send_research(research, user).deliver
   end
 end
